@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  /* --yellow: #FCE029; */
+  /* --yellow: #FCDD4B; */
+  --yellow: #FEF08A;
+  --yellow-dark: #FACC15;
+  --blue: #4285F3;
+  --black: #231F20;
+  --coolGray: #1E3A8A;
+  --coolGray-light: #1F2937;
+}
+
+body{
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: whitesmoke;
+  margin: 0;
+  background-image: url(images/starwars-bg.jpg);
+  background-size: cover;
+  overscroll-behavior: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-color: #FDE34D; */
+}
+
+h1{
+  font-size: 2rem;
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+}
+
+h3{
+  color: #c5c5c5;
+  margin-top: 1rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.input-text{
+  width: calc(400px - 2rem);
+  height: 80%;
+  font-size: 1.5rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  line-height: 1.8rem;
+  max-width: 70vw;
+  display: block;
+  resize: none;
+  background-color: transparent;
+  border: none;
+  margin: 2rem auto;
+  color: whitesmoke;
+}
+.input-text:focus{
+  outline: none;
+}
+
+#output-div{
+  margin: 2rem auto;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 1rem;
+}
+
+.flip-container {
+  width: 400px;
+  height: 400px;
+  max-width: 85vw;
+  perspective: 1000px;
+  margin: 3rem auto;
+}
+
+.flip-container-inner {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  max-width: 85vw;
+  margin: auto;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 1rem;
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
+}
+
+.flip-action .flip-container-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-container-front, .flip-container-back {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  max-width: 85vw;
+  margin: auto;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.flip-container-back {
+  transform: rotateY(180deg);
+}
+
+.button{
+  padding: 1rem 2rem;
+  background-color: whitesmoke;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  transition: display 1s ease;
+}
+
+.hide{
+  display: none;
+}
+
+.font-red{
+  color: red;
+}
