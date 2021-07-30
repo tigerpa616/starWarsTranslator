@@ -5,7 +5,7 @@ var outputDiv = document.querySelector("#output-div");
 
 var flipContainer = document.querySelector(".flip-container");
 
-var serverURL = "https://api.funtranslations.com/translate/gungan.json?text=";
+var serverURL = "https://api.funtranslations.com/translate/yoda.json?text=";
 
 function translatetext() {
   flipContainer.classList.add("flip-action");
